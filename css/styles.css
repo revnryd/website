@@ -22,46 +22,42 @@
 
 .button:disabled{opacity:.65;cursor:not-allowed;transform:none;box-shadow:none}
 
-/* Landing hero device frame */
-.hero-phone-frame{
-  position:absolute;
-  z-index:2;
+
+/* Home hero screenshot: device treatment preserving original hero geometry */
+.home-device-frame{
+  box-sizing:border-box;
   background:#191817;
-  padding:12px 10px 14px;
-  border-radius:clamp(28px,3vw,44px);
-  box-shadow:0 28px 70px rgba(34,25,20,.24),0 8px 24px rgba(34,25,20,.14);
-  line-height:0;
+  padding:10px 8px 12px;
+  border-radius:34px;
+  box-shadow:0 28px 70px rgba(34,25,20,.22),0 8px 24px rgba(34,25,20,.13);
   overflow:hidden;
+  line-height:0;
 }
-.hero-phone-frame .hero-phone-island{
+.home-device-frame > img[src$="home.webp"]{
+  position:static !important;
+  inset:auto !important;
+  transform:none !important;
+  display:block;
+  width:100% !important;
+  height:auto !important;
+  max-width:none !important;
+  border-radius:26px;
+  object-fit:contain;
+}
+.home-device-island{
   position:absolute;
-  z-index:4;
+  z-index:5;
   top:7px;
   left:50%;
   transform:translateX(-50%);
-  width:22%;
-  min-width:48px;
-  max-width:76px;
+  width:58px;
   height:14px;
   border-radius:999px;
   background:#0b0b0b;
-}
-.hero-phone-frame img[src$="home.webp"]{
-  display:block;
-  width:100%;
-  height:auto;
-  border-radius:clamp(20px,2.3vw,34px);
-  object-fit:contain;
-}
-/* Reuse the original Home image's absolute geometry on the wrapper. */
-.hero-visual > .hero-phone-frame{
-  width:min(31vw,360px);
-  right:clamp(13%,18vw,24%);
-  top:clamp(18px,4vw,58px);
-}
-@media(max-width:900px){
-  .hero-visual > .hero-phone-frame{width:min(42vw,330px);right:18%;top:34px}
+  pointer-events:none;
 }
 @media(max-width:640px){
-  .hero-visual > .hero-phone-frame{width:min(62vw,300px);right:19%;top:26px}
+  .home-device-frame{padding:8px 7px 10px;border-radius:28px}
+  .home-device-frame > img[src$="home.webp"]{border-radius:21px}
+  .home-device-island{width:48px;height:12px;top:6px}
 }
