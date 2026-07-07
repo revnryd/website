@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Rev-N-Ryd helps riders discover rides, places, communities, and events.">
-  <title>Rev-N-Ryd — Coming Soon</title>
+  <title>Rev-N-Ryd — Motorcycle Community &amp; Group Riding App</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Fraunces:ital,opsz,wght@0,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css?v=20260707-2">
   <script src="js/main.js" defer></script>
 <link rel="canonical" href="https://revnryd.com/">
+<meta name="robots" content="index,follow">
 <link rel="icon" href="/assets/icons/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
 <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
@@ -27,6 +27,37 @@
 <meta name="twitter:title" content="Rev-N-Ryd — There's always somewhere to ride.">
 <meta name="twitter:description" content="Discover rides, find places worth riding to, meet your community, and stay together on the road.">
 <meta name="twitter:image" content="https://revnryd.com/assets/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://revnryd.com/#organization",
+      "name": "Rev-N-Ryd",
+      "alternateName": "RevNryd",
+      "url": "https://revnryd.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://revnryd.com/assets/icons/android-chrome-512x512.png"
+      },
+      "email": "hello@revnryd.com",
+      "description": "Rev-N-Ryd is an upcoming motorcycle community and group riding platform."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://revnryd.com/#website",
+      "url": "https://revnryd.com/",
+      "name": "Rev-N-Ryd",
+      "alternateName": "RevNryd",
+      "publisher": {
+        "@id": "https://revnryd.com/#organization"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <header class="site-header container">
@@ -46,7 +77,7 @@
   </div>
 
   <div class="hero-product reveal" aria-label="Rev-N-Ryd product preview">
-    <div class="shot-image shot-main home-device-frame"><div class="home-device-island" aria-hidden="true"></div><img class="shot-image shot-main" src="assets/screenshots/home.webp" alt="Rev-N-Ryd home screen" width="921" height="2048" loading="eager" decoding="async" fetchpriority="high"></div>
+    <div class="shot-image shot-main home-device-frame"><img class="shot-image shot-main" src="assets/screenshots/home.webp" alt="Rev-N-Ryd home screen" width="921" height="2048" loading="eager" decoding="async" fetchpriority="high"></div>
     <img class="shot-image shot-rides" src="assets/screenshots/your-rides.webp" alt="" aria-hidden="true" width="1072" height="1113" loading="lazy" decoding="async">
     <img class="shot-image shot-explore" src="assets/screenshots/explore-nearby.webp" alt="" aria-hidden="true" width="1075" height="1120" loading="lazy" decoding="async">
   </div>
@@ -129,7 +160,7 @@
 <footer class="site-footer">
   <div class="container footer-row">
     <a class="wordmark" href="#top">Rev-N-Ryd</a>
-    <nav aria-label="Legal links"><a href="/privacy.html" >Privacy Policy</a><a href="/terms.html" >Terms of Service</a><a href="mailto:hello@revnryd.com" >Contact</a></nav>
+    <nav aria-label="Footer links"><a href="/about.html">About</a><a href="/privacy.html" >Privacy Policy</a><a href="/terms.html" >Terms of Service</a><a href="mailto:hello@revnryd.com" >Contact</a></nav>
     <p>© 2026 Rev-N-Ryd</p>
   </div>
 </footer>
