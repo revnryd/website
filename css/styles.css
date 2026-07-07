@@ -21,3 +21,47 @@
 @media(max-width:600px){.hero-product{height:clamp(390px,112vw,540px)}.shot-main{width:48%;left:26%}.shot-rides{width:52%;top:25%}.shot-explore{width:54%;bottom:5%}.product-shot{max-width:100%;max-height:520px}.product-media{min-height:520px}}
 
 .button:disabled{opacity:.65;cursor:not-allowed;transform:none;box-shadow:none}
+
+/* Landing hero device frame */
+.hero-phone-frame{
+  position:absolute;
+  z-index:2;
+  background:#191817;
+  padding:12px 10px 14px;
+  border-radius:clamp(28px,3vw,44px);
+  box-shadow:0 28px 70px rgba(34,25,20,.24),0 8px 24px rgba(34,25,20,.14);
+  line-height:0;
+  overflow:hidden;
+}
+.hero-phone-frame .hero-phone-island{
+  position:absolute;
+  z-index:4;
+  top:7px;
+  left:50%;
+  transform:translateX(-50%);
+  width:22%;
+  min-width:48px;
+  max-width:76px;
+  height:14px;
+  border-radius:999px;
+  background:#0b0b0b;
+}
+.hero-phone-frame img[src$="home.webp"]{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:clamp(20px,2.3vw,34px);
+  object-fit:contain;
+}
+/* Reuse the original Home image's absolute geometry on the wrapper. */
+.hero-visual > .hero-phone-frame{
+  width:min(31vw,360px);
+  right:clamp(13%,18vw,24%);
+  top:clamp(18px,4vw,58px);
+}
+@media(max-width:900px){
+  .hero-visual > .hero-phone-frame{width:min(42vw,330px);right:18%;top:34px}
+}
+@media(max-width:640px){
+  .hero-visual > .hero-phone-frame{width:min(62vw,300px);right:19%;top:26px}
+}
